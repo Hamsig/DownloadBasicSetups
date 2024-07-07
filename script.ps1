@@ -1,6 +1,6 @@
 Add-Type -AssemblyName System.Windows.Forms
 
-$Urls = "https://aka.ms/vs/17/release/vc_redist.x64.exe","https://aka.ms/vs/17/release/vc_redist.x86.exe","https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe","https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.tr.exe","https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64","https://www.roblox.com/download/client?os=win","https://github.com/ppy/osu/releases/latest/download/install.exe","https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.1.2-Full-Installer-x64.exe","https://download-new.utorrent.com/endpoint/btweb/os/windows/track/stable","https://raw.githubusercontent.com/mrpond/BlockTheSpot/master/install.ps1"
+$Urls = "https://aka.ms/vs/17/release/vc_redist.x64.exe","https://aka.ms/vs/17/release/vc_redist.x86.exe","https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe","https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.tr.exe","https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64","https://www.roblox.com/download/client?os=win","https://github.com/ppy/osu/releases/latest/download/install.exe","https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.1.2-Full-Installer-x64.exe","https://download-new.utorrent.com/endpoint/btweb/os/windows/track/stable","https://raw.githubusercontent.com/mrpond/BlockTheSpot/master/install.ps1","https://tlauncher.org/installer"
 
 Write-Output "Lütfen indirme dizini seçin"
 
@@ -41,6 +41,8 @@ foreach ($url in $Urls) {
          $FileName = "Bittorent.exe"
      } elseif ($Count -eq 9) {
          $FileName = "Spotify.ps1"
+     } elseif ($Count -eq 10) {
+         $FileName = "TLauncher.exe"
      } else {
          $FileName = [System.IO.Path]::GetFileName($url)
      }
